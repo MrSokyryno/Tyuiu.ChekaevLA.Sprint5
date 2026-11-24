@@ -12,7 +12,7 @@
                 writer.Write(y);
              
             }
-            return Convert.ToString(File.ReadAllBytes(path));
+            return Convert.ToBase64String(File.ReadAllBytes(path));
         }
     }
 }
