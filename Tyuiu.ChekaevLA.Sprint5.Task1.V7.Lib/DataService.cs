@@ -5,10 +5,11 @@
         public string SaveToFileTextData(int startValue, int stopValue)
         {
             string res = "";
-            for (int i = startValue; i < stopValue; i++)
+            for (int i = startValue; i < stopValue+1; i++)
             { 
                 double y = Math.Round(Math.Sin(i) / (i+1.2) - Math.Sin(i) * 2 - 2 * i, 2);
-                res += $"{y}\n";
+                if (i != stopValue) { res += $"{y}\n"; }
+                else res += Convert.ToString(y);
             }
             return res;
         }

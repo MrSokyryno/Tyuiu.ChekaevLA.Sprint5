@@ -6,8 +6,9 @@ namespace Tyuiu.ChekaevLA.Sprint5.Task4.V18.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double f = Convert.ToDouble(File.ReadAllText(path).Trim());
-            return Math.Round(Math.Cos(f)+Math.Pow(f,2)/2,3);
+            string raw = File.ReadAllText(path).Trim().Replace(',', '.');
+            double f = Convert.ToDouble(raw, CultureInfo.InvariantCulture);
+            return Math.Round(Math.Cos(f) + Math.Pow(f, 2) / 2, 3);
         }
     }
 }

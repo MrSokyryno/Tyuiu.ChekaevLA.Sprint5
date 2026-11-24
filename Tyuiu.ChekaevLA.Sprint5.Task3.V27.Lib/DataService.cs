@@ -5,7 +5,7 @@
         public string SaveToFileTextData(int x)
         {
             double y = Math.Round(Math.Pow((x - 1), 3 * x + 1), 3);
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.txt");
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.bin");
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
             {
