@@ -4,7 +4,14 @@
     {
         public string SaveToFileTextData(int x)
         {
-            return Convert.ToString(Math.Round(Math.Pow((x - 1), 3 * x + 1),3));
+            double y = Math.Round(Math.Pow((x - 1), 3 * x + 1), 3);
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.txt");
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Append)))
+            {
+                writer.Write(y);
+             
+            }
+            return File.ReadAllText(path);
         }
     }
 }

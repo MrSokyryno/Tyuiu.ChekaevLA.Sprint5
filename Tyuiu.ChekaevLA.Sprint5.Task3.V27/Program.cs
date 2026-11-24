@@ -31,13 +31,6 @@ namespace Tyuiu.ChekaevLA.Sprint5.Task3.V27
             string y = dataService.SaveToFileTextData(3);
             Console.WriteLine(y);
 
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.txt");
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Append)))
-            {
-                writer.Write(y);
-            }
-
-
 
             Console.ReadKey();
         }

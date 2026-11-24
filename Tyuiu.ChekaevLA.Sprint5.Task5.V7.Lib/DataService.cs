@@ -13,7 +13,7 @@ namespace Tyuiu.ChekaevLA.Sprint5.Task5.V7.Lib
             { 
                 if (s.Contains('.') == false) 
                 {
-                    for (int i = 1; i < double.Parse(s); i++) { res *= i; }
+                    for (int i = 1; i < double.Parse(s)+1; i++) { res *= i; }
                     break;
                 }
             }

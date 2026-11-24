@@ -4,14 +4,16 @@
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            for (int x = 0; x < (matrix.Length-1); x++)
+            string line = "";
+            for (int x = 0; x < 3; x++)
             {
-                for (int y = 0; y < (matrix.Length - 1); y++)
+                for (int y = 0; y < 3; y++)
                 { 
-                    if (matrix[x,y] % 2 == 0) { matrix[x, y] = 0; }
+                    if (matrix[x,y] % 2 == 1) { line += " 0"; }
+                    else { line += " " + Convert.ToString(matrix[x, y]); }
                 } 
             }
-            return Convert.ToString(matrix);
+            return line;
         }
     }
 }

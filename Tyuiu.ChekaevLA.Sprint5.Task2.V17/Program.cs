@@ -29,9 +29,9 @@ namespace Tyuiu.ChekaevLA.Sprint5.Task2.V17
             Console.WriteLine("***************************************************************************");
 
             int[,] matrix = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
-            for (int x = 0; x<2; x++) 
+            for (int x = 0; x<3; x++) 
             {
-                for (int i = 0; i<2; i++) 
+                for (int i = 0; i<3; i++) 
                 {
                     Console.Write($"Введите значение элемента [{x},{i}] матрицы:");
                     matrix[x, i] = Convert.ToInt16(Console.ReadLine()); 

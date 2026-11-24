@@ -4,7 +4,7 @@
     {
         public double LoadFromDataFile(string path)
         {
-            double f = double.Parse(File.ReadAllText(path));
+            double f = double.Parse(File.ReadAllText(path).Trim());
             return Math.Round(Math.Cos(f)+Math.Pow(f,2)/2,3);
         }
     }

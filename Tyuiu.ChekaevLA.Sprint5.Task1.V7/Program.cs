@@ -31,8 +31,6 @@ namespace Tyuiu.ChekaevLA.Sprint5.Task1.V7
             Console.WriteLine("***************************************************************************");
 
             string y = dataService.SaveToFileTextData(-5, 5);
-            for (int i = -5; i < 5; i++) { Console.Write($"{i} \t"); }
-            Console.WriteLine();
             Console.WriteLine(y);
 
             string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
