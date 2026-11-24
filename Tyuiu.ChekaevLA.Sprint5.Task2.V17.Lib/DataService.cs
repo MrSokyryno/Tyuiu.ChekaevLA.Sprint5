@@ -9,8 +9,10 @@
             {
                 for (int y = 0; y < 3; y++)
                 { 
-                    if (matrix[x,y] % 2 == 1) { line += " 0"; }
-                    else { line += " " + Convert.ToString(matrix[x, y]); }
+                    if (matrix[x,y] % 2 == 1) { line += "0"; }
+                    else { line += Convert.ToString(matrix[x, y]); }
+                    if (y != 2) { line += ";"; }
+                    else if (x != 2) { line += "\n"; }
                 } 
             }
             return line;

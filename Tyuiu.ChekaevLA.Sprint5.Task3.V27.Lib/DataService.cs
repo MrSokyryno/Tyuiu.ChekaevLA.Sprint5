@@ -6,12 +6,13 @@
         {
             double y = Math.Round(Math.Pow((x - 1), 3 * x + 1), 3);
             string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.txt");
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Append)))
+
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
             {
                 writer.Write(y);
              
             }
-            return File.ReadAllText(path);
+            return Convert.ToBase64String(File.ReadAllBytes(path));
         }
     }
 }

@@ -8,7 +8,7 @@
             for (int i = startValue; i < stopValue; i++)
             { 
                 double y = Math.Round(Math.Sin(i) / (i+1.2) - Math.Sin(i) * 2 - 2 * i, 2);
-                res += $"{y} \n";
+                res += $"{y}\n";
             }
             return res;
         }
